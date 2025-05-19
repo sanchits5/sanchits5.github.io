@@ -38,7 +38,7 @@
   }
 
   .profilePic {
-    background: url(/Resume/Resource/design.jpg) no-repeat center/cover;
+    background: url(/Resource/design.jpg) no-repeat center/cover;
     height: 92vh;
     display: flex;
     align-items: center;
