@@ -107,7 +107,7 @@
       font-size: 35px;
       font-family: 'Quicksand';
       font-weight: bold;
-      color: var(--accent);
+      color: var(--text);
       text-align: center;
       margin: 0;
       position: relative;
@@ -231,7 +231,7 @@
     }
 
     .card1 {
-      width: 80%;
+      width: 100%;
       margin: auto;
       background: black;
       border-radius: 10px;
@@ -372,6 +372,7 @@
 
     .content1 {
       font-size: 15px;
+      margin-top: 5px;
       font-weight: lighter;
     }
 

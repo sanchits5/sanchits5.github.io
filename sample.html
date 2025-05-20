@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technical Skills Card with Fading Tiles</title>
+  <style>
+   
+
+    #techCard {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .card1 {
+      width: 80%;
+      margin: auto;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      position: relative;
+      overflow: hidden;
+      padding: 20px;
+    }
+
+    .tile-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0; /* Tiles behind content */
+    }
+
+    .tile {
+      background-color: rgb(7, 0, 6);
+      opacity: 0.7;
+      animation: continuousFade 2s ease-in-out infinite;
+      animation-delay: calc(var(--i) * 0.1s); /* Staggered delay */
+    }
+
+    .tile:nth-child(1) { --i: 1; }
+    .tile:nth-child(2) { --i: 2; }
+    .tile:nth-child(3) { --i: 3; }
+    .tile:nth-child(4) { --i: 4; }
+    .tile:nth-child(5) { --i: 5; }
+    .tile:nth-child(6) { --i: 6; }
+    .tile:nth-child(7) { --i: 7; }
+    .tile:nth-child(8) { --i: 8; }
+    .tile:nth-child(9) { --i: 9; }
+    .tile:nth-child(10) { --i: 10; }
+    .tile:nth-child(11) { --i: 11; }
+    .tile:nth-child(12) { --i: 12; }
+    .tile:nth-child(13) { --i: 13; }
+    .tile:nth-child(14) { --i: 14; }
+    .tile:nth-child(15) { --i: 15; }
+    .tile:nth-child(16) { --i: 16; }
+
+    @keyframes continuousFade {
+      0% {
+        opacity: 0.7;
+        transform: scale(1);
+      }
+      50% {
+        opacity: 0.2;
+        transform: scale(0.95);
+      }
+      100% {
+        opacity: 0.7;
+        transform: scale(1);
+      }
+    }
+    .dock, .dock1 {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 10px 0;
+      flex-wrap: wrap;
+      z-index: 1; /* Above tiles */
+      position: relative;
+    }
+
+    .dock img, .dock1 img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+  <section id="techCard">
+    <div class="card1">
+      <div class="tile-container">
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+      </div>
+      <h2 class="exp">Technical Skills</h2>
+
+      <p></p>
+      <div class="dock">
+        <img src="Resource/js.png" alt="JavaScript">
+        <img src="Resource/html.png" alt="HTML">
+        <img src="Resource/css.png" alt="CSS">
+        <img src="Resource/java.png" alt="Java">
+        <img src="Resource/json.png" alt="JSON">
+        <img src="Resource/spring.png" alt="Spring">
+      </div>
+      <div class="dock">
+        <img src="Resource/hibernate.png" alt="Hibernate">
+        <img src="Resource/git.png" alt="Git">
+        <img src="Resource/github.png" alt="GitHub">
+        <img src="Resource/gitlab.png" alt="GitLab">
+        <img src="Resource/intellijidea.png" alt="IntelliJ IDEA">
+        <img src="Resource/jenkins.png" alt="Jenkins">
+      </div>
+      <div class="dock1">
+        <img src="Resource/xml.png" alt="XML">
+        <img src="Resource/postman.png" alt="Postman">
+        <img src="Resource/redhat.png" alt="Red Hat">
+        <img src="Resource/swagger.png" alt="Swagger">
+        <img src="Resource/eclipse.png" alt="Eclipse">
+        <img src="Resource/jboss.png" alt="JBoss">
+      </div>
+      <div class="dock1">
+        <img src="Resource/docker.png" alt="Docker">
+        <img src="Resource/maven.png" alt="Maven">
+        <img src="Resource/mysql.png" alt="MySQL">
+        <img src="Resource/oracle.png" alt="Oracle">
+        <img src="Resource/tomcat.png" alt="Tomcat">
+        <img src="Resource/springsecurity.png" alt="Spring Security">
+      </div>
+    </div>
+  </section>
+</body>
+</html>
