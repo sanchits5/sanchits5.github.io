@@ -231,7 +231,7 @@
     }
 
     .card1 {
-      width: 90%;
+      width: 80%;
       margin: auto;
       background: black;
       border-radius: 10px;
@@ -395,7 +395,6 @@
 
     .icon-container a {
       margin-right: 25px;
-      font-size: 16px;
       color: var(--accent);
       text-decoration: none;
     }
