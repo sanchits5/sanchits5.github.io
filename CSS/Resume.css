@@ -527,19 +527,15 @@
       .navbar a:hover {
         background-color: #f0f0f0;
       }
+ .profile {
+    display: flex;
+    flex-direction: column;
+  }
 
-      .profilePic {
-        height: auto;
-        min-height: 100vh;
-        padding: 20px;
-      }
-
-      .profile {
-        flex-direction: column;
-        padding: 20px;
-        align-items: center;
-        text-align: center;
-      }
+  .profile-image {
+    order: -1; /* Move image above text/buttons */
+    margin-bottom: 20px; /* Optional spacing */
+  }
 
       .profile-text {
         max-width: 100%;
