@@ -74,7 +74,7 @@
     }
 
     .edu {
-      font-size: 25px;
+      font-size: 20px;
       font-family: 'Quicksand';
       font-weight: bolder;
       color: var(--accent);
@@ -97,7 +97,7 @@
     }
 
     .boldword {
-      font-size: 18px;
+      font-size: 16px;
       font-family: 'Quicksand';
       font-weight: bolder;
       color: var(--text);
