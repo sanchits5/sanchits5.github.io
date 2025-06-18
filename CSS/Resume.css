@@ -746,6 +746,14 @@ img {
     max-width: 100%;
   }
 
+  .icon-btn svg { 
+  width: 60px;
+  height: 25px;
+}
+
+.btn2 {
+  margin-left: 10px;
+}
   .skillscontainer {
     grid-template-columns: 1fr;
     gap: 10px;
