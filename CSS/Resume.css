@@ -76,7 +76,7 @@ body {
 
 .profilePic {
   background: url(/Resource/design.jpg) no-repeat center/cover;
-  height: 92vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -573,8 +573,7 @@ img {
     padding: 0;
     font-size: 16px;
     line-height: 1;
-    margin-top: 25px;
-  }
+    }
 
   .navbar {
     display: none;
