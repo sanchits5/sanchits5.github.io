@@ -257,6 +257,9 @@ section {
   box-sizing: border-box;
 }
 
+.tile{
+  position: relative;
+}
 .card {
   padding: 1rem;
   border: 1px solid #ccc;
@@ -332,45 +335,77 @@ section {
 }
 
 .dock, .dock1 {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(5px);
-  border-radius: 12px;
-  padding: 16px 15px;
-  width: max-content;
-  margin: 20px auto;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  position: relative;
-  z-index: 1;
-}
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(5px);
+            border-radius: 12px;
+            padding: 16px 15px;
+            width: max-content;
+            margin: 20px auto;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1;
+        }
 
-.dock img, .dock1 img {
-  width: 50px;
-  height: 50px;
-  margin: 0 8px;
-  transition: transform 0.3s ease, margin-bottom 0.3s ease;
-  cursor: pointer;
-}
+        .tech-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            margin: 0 8px;
+        }
 
-.dock img:hover, .dock1 img:hover {
-  transform: scale(1.4) translateY(-8px);
-  margin-bottom: 15px;
-}
+        .dock img, .dock1 img {
+            width: 50px;
+            height: 50px;
+            transition: transform 0.3s ease, margin-bottom 0.3s ease;
+            cursor: pointer;
+          margin: 0 12px;
+          }
 
-.dock img::after, .dock1 img::after {
-  content: '';
-  display: block;
-  width: 50px;
-  height: 15px;
-  background: linear-gradient(rgba(255, 255, 255, 0.3), transparent);
-  position: absolute;
-  bottom: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0.4;
-}
+        .dock img:hover, .dock1 img:hover {
+            transform: scale(1.4) translateY(-8px);
+            filter: drop-shadow(0 6px 12px rgba(0,0,0,0.4));
+            margin-bottom: 15px;
+        }
+
+        .dock img::after, .dock1 img::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 15px;
+            background: linear-gradient(rgba(255, 255, 255, 0.3), transparent);
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0.4;
+        }
+        
+        .tech-name {
+            color: white;
+            font-size: 15px;
+            font-weight: 500;
+            text-align: center;
+            margin-top: 8px;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            font-family: 'Arial', sans-serif;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            white-space: nowrap;
+            position: absolute;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%) translateY(-10px);
+        }
+        
+        .tech-item:hover .tech-name {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
 
 .cards {
   display: grid;
