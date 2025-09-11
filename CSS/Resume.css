@@ -844,8 +844,35 @@ img {
     max-width: 100%;
     overflow-x: auto;
   }
+.tech-item {
+    margin: 6px 2px;
+    min-width: 60px;
+    max-width: 80px;
+  }
+  .tech-item img {
+    width: 30px;
+    height: 30px;
+  }
+  .tech-name {
+    font-size: 12px;
+    bottom: -18px;
+  }
 }
-
+@media (max-width: 480px) {
+  .tech-item {
+    margin: 4px 1px;
+    min-width: 40px;
+    max-width: 60px;
+  }
+  .tech-item img {
+    width: 22px;
+    height: 22px;
+  }
+  .tech-name {
+    font-size: 10px;
+    bottom: -14px;
+  }
+}
 @media only screen and (max-width: 300px) {
   .text {
     font-size: 11px;
