@@ -577,6 +577,12 @@
             opacity: 1;
             transform: translateY(0);
         }
+        .dark #wrapProgressBar circle:first-child {
+  stroke: #232336;
+}
+.dark #progressCircle {
+  stroke: #a7ffeb;
+}
     </style>
 </head>
 <body>
@@ -627,6 +633,14 @@
                         <p id="subtitle" class="subtitle text-3xl text-muted-foreground mb-8 transition-all duration-700 delay-300 opacity-0 translate-y-5">
                             The phoenix must burn to emerge.
                         </p>
+                        <div id="progressBarContainer" style="width:100%;max-width:340px;margin:1.5rem auto 0 auto;display:flex;justify-content:center;">
+  <svg id="wrapProgressBar" width="70" height="70" viewBox="0 0 70 70">
+    <circle cx="35" cy="35" r="32" stroke="#e9ebef" stroke-width="6" fill="none" />
+    <circle id="progressCircle" cx="35" cy="35" r="32" stroke="#7814c0" stroke-width="6" fill="none"
+      stroke-linecap="round"
+      style="stroke-dasharray:201.06;stroke-dashoffset:201.06;transition:stroke-dashoffset 0.2s linear;" />
+  </svg>
+</div>
                     </div>
                 </div>
             </div>
@@ -867,5 +881,28 @@
             }
         });
     </script>
+    <script>
+  // Wraparound Progress Bar Logic
+  const progressCircle = document.getElementById('progressCircle');
+  const circleLength = 2 * Math.PI * 32; // 2πr, r=32
+  let elapsed = 0;
+  const total = 5500; // 7 seconds (matches redirect)
+  const interval = 30;
+
+  function animateProgressBar() {
+    elapsed += interval;
+    const progress = Math.min(elapsed / total, 1);
+    progressCircle.style.strokeDashoffset = (circleLength * (1 - progress)).toFixed(2);
+    if (progress < 1) {
+      setTimeout(animateProgressBar, interval);
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    progressCircle.style.strokeDasharray = circleLength;
+    progressCircle.style.strokeDashoffset = circleLength;
+    setTimeout(animateProgressBar, 500); // slight delay for effect
+  });
+</script>
 </body>
 </html>
