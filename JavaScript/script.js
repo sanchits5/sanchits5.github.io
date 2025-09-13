@@ -15,7 +15,7 @@ let deletingSpeed = 50;
 let pauseDuration = 2000;
 
 // Initialize everything when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
     initializeAnimatedBackground();
     initializeNavigation();
     initializeTypingAnimation();
@@ -24,32 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
     generateProjects();
     generateExperience();
     initializeContactForm();
-
-    // Smooth scrolling for navigation links
-    const navLinks = document.querySelectorAll('.nav-link');
-
-    navLinks.forEach(link => {
-        link.addEventListener('click', function (e) {
-            const href = this.getAttribute('href');
-
-            // ONLY prevent default for internal anchor links
-            if (href && href.startsWith('#')) {
-                e.preventDefault();
-
-                const sectionId = href.substring(1);
-                const section = document.getElementById(sectionId);
-
-                if (section) {
-                    // Your smooth scroll logic here
-                    window.scrollTo({
-                        top: section.offsetTop - document.querySelector('.navbar').offsetHeight,
-                        behavior: 'smooth'
-                    });
-                }
-            }
-            // For other links (like the PDF), do nothing and let the browser handle it.
-        });
-    });
 });
 
 // Animated Background
@@ -141,38 +115,75 @@ function initializeNavigation() {
     const navbar = document.getElementById('navbar');
     const navLinks = document.querySelectorAll('.nav-link');
     const progressBar = document.querySelector('.scroll-progress');
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    // --- Mobile Menu Toggle ---
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', () => {
+            // This toggles the menu and hamburger icon animation
+            navMenu.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+    }
 
     // Scroll progress and active section tracking
     function updateNavigation() {
-        const scrolled = window.scrollY;
-        const maxHeight = document.documentElement.scrollHeight - window.innerHeight;
-        const progress = (scrolled / maxHeight) * 100;
-        progressBar.style.width = `${progress}%`;
+        const scrollPosition = window.scrollY;
+        const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = (scrollPosition / totalHeight) * 100;
+        if (progressBar) {
+            progressBar.style.width = `${progress}%`;
+        }
 
-        // Update active section
-        const sections = ['hero', 'about', 'projects', 'experience', 'contact'];
-        let activeSection = 'hero';
-
-        sections.forEach(sectionId => {
-            const element = document.getElementById(sectionId);
-            if (element) {
-                const rect = element.getBoundingClientRect();
-                if (rect.top <= 100 && rect.bottom >= 100) {
-                    activeSection = sectionId;
-                }
+        let currentSection = '';
+        document.querySelectorAll('section[id]').forEach(section => {
+            const sectionTop = section.offsetTop - navbar.offsetHeight;
+            if (scrollPosition >= sectionTop) {
+                currentSection = section.getAttribute('id');
             }
         });
 
-        // Update active nav link
         navLinks.forEach(link => {
             link.classList.remove('active');
-            if (link.dataset.section === activeSection) {
+            // Check href for internal links instead of data-section
+            if (link.getAttribute('href') === `#${currentSection}`) {
                 link.classList.add('active');
             }
         });
     }
 
     window.addEventListener('scroll', updateNavigation);
+
+    // Smooth scrolling for nav links
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+
+            // ONLY handle internal links (starting with #)
+            if (href && href.startsWith('#')) {
+                e.preventDefault();
+
+                // Close mobile menu if it's open
+                if (navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                }
+
+                const sectionId = href.substring(1);
+                scrollToSection(sectionId);
+            }
+            // For all other links (resume, etc.), do nothing and let the browser work.
+        });
+    });
+}
+
+// Smooth scroll function
+function scrollToSection(sectionId) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+    }
 }
 
 // Typing Animation
