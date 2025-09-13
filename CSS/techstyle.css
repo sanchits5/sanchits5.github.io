@@ -1,0 +1,349 @@
+/* CSS Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS Variables - Light Theme */
+:root {
+    --font-size: 16px;
+    --background: #ffffff;
+    --foreground: oklch(0.145 0 0);
+    --card: #ffffff;
+    --card-foreground: oklch(0.145 0 0);
+    --popover: oklch(1 0 0);
+    --popover-foreground: oklch(0.145 0 0);
+    --primary: #030213;
+    --primary-foreground: oklch(1 0 0);
+    --secondary: oklch(0.95 0.0058 264.53);
+    --secondary-foreground: #030213;
+    --muted: #ececf0;
+    --muted-foreground: #717182;
+    --accent: #e9ebef;
+    --accent-foreground: #030213;
+    --destructive: #d4183d;
+    --destructive-foreground: #ffffff;
+    --border: rgba(0, 0, 0, 0.1);
+    --input: transparent;
+    --input-background: #f3f3f5;
+    --switch-background: #cbced4;
+    --font-weight-medium: 500;
+    --font-weight-normal: 400;
+    --ring: oklch(0.708 0 0);
+    --radius: 0.625rem;
+    --radius-sm: calc(var(--radius) - 4px);
+    --radius-md: calc(var(--radius) - 2px);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) + 4px);
+}
+
+/* Dark Theme */
+.dark {
+    --background: oklch(0.145 0 0);
+    --foreground: oklch(0.985 0 0);
+    --card: oklch(0.145 0 0);
+    --card-foreground: oklch(0.985 0 0);
+    --popover: oklch(0.145 0 0);
+    --popover-foreground: oklch(0.985 0 0);
+    --primary: oklch(0.985 0 0);
+    --primary-foreground: oklch(0.205 0 0);
+    --secondary: oklch(0.269 0 0);
+    --secondary-foreground: oklch(0.985 0 0);
+    --muted: oklch(0.269 0 0);
+    --muted-foreground: oklch(0.708 0 0);
+    --accent: oklch(0.269 0 0);
+    --accent-foreground: oklch(0.985 0 0);
+    --destructive: oklch(0.396 0.141 25.723);
+    --destructive-foreground: oklch(0.637 0.237 25.331);
+    --border: oklch(0.269 0 0);
+    --input: oklch(0.269 0 0);
+    --ring: oklch(0.439 0 0);
+}
+
+/* Base Typography */
+html {
+    font-size: var(--font-size);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--foreground);
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+}
+
+h4 {
+    font-size: 1rem;
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5;
+}
+
+/* Utility Classes */
+.min-h-screen {
+    min-height: 100vh;
+}
+
+.bg-background {
+    background-color: var(--background);
+}
+
+.p-6 {
+    padding: 1.5rem;
+}
+
+.max-w-6xl {
+    max-width: 72rem;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Skills Grid CSS Variables - Customize these to match your design */
+:root {
+    /* Grid layout */
+    --skills-grid-gap: 1.5rem;
+    --skills-card-min-width: 280px;
+    --skills-card-max-width: 320px;
+    
+    /* Card styling */
+    --skills-card-bg: var(--card);
+    --skills-card-border: var(--border);
+    --skills-card-radius: var(--radius-lg);
+    --skills-card-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --skills-card-shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+    --skills-card-padding: 1.5rem;
+    
+    /* Logo styling */
+    --skills-logo-size: 3rem;
+    --skills-logo-bg: var(--muted);
+    --skills-logo-radius: 50%;
+    
+    /* Proficiency dots */
+    --skills-dot-size: 6px;
+    --skills-dot-gap: 4px;
+    --skills-dot-color: var(--muted);
+    --skills-dot-filled-color: var(--primary);
+    
+    /* Animation */
+    --skills-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Basic card styling for the container */
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.card-header {
+    padding: 1.5rem 1.5rem 0;
+}
+
+.card-title {
+    margin: 0;
+    text-align: center;
+    color: var(--card-foreground);
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.skills-container {
+    width: 100%;
+}
+
+/* Skills Grid Styles */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(var(--skills-card-min-width), var(--skills-card-max-width)));
+    gap: var(--skills-grid-gap);
+    width: 100%;
+    justify-content: center;
+}
+
+.skill-card {
+    background: var(--skills-card-bg);
+    border: 1px solid var(--skills-card-border);
+    border-radius: var(--skills-card-radius);
+    padding: var(--skills-card-padding);
+    box-shadow: var(--skills-card-shadow);
+    transition: var(--skills-transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-card:hover {
+    box-shadow: var(--skills-card-shadow-hover);
+    transform: translateY(-2px);
+}
+
+.skill-card:focus-within {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+}
+
+.skill-card__logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--skills-logo-size);
+    height: var(--skills-logo-size);
+    margin: 0 auto 1rem;
+    position: relative;
+    background: var(--skills-logo-bg);
+    border-radius: var(--skills-logo-radius);
+    overflow: hidden;
+}
+
+.skill-card__logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 0.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.skill-card__logo--loaded {
+    opacity: 1;
+}
+
+.skill-card__logo-fallback {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: var(--muted-foreground);
+    background: var(--skills-logo-bg);
+}
+
+.skill-card__content {
+    text-align: center;
+}
+
+.skill-card__name {
+    margin: 0 0 0.75rem 0;
+    color: var(--card-foreground);
+}
+
+.skill-card__proficiency {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.skill-card__proficiency-label {
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
+    font-weight: 500;
+}
+
+.scroll-animate[data-animation="slideRight"] {
+    transform: translateX(2px);
+}
+
+.skill-card__dots {
+    display: flex;
+    gap: var(--skills-dot-gap);
+    align-items: center;
+}
+
+.skills-dot {
+    width: var(--skills-dot-size);
+    height: var(--skills-dot-size);
+    border-radius: 50%;
+    background-color: var(--skills-dot-color);
+    transition: background-color 0.2s ease;
+}
+
+.skills-dot--filled {
+    background-color: var(--skills-dot-filled-color);
+}
+
+.skill-card__note {
+    margin: 0;
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
+    line-height: 1.4;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    :root {
+        --skills-grid-gap: 1rem;
+        --skills-card-min-width: 250px;
+        --skills-card-padding: 1.25rem;
+        --skills-logo-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    :root {
+        --skills-card-min-width: 100%;
+        --skills-card-padding: 1rem;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .skill-card {
+        border-width: 2px;
+    }
+    
+    .skills-dot--filled {
+        outline: 1px solid var(--card-foreground);
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .skill-card,
+    .skill-card__logo,
+    .skills-dot {
+        transition: none;
+    }
+    
+    .skill-card:hover {
+        transform: none;
+    }
+}

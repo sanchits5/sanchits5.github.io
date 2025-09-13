@@ -2,498 +2,352 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sanchit's Portfolio</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" type="text/css" href="/CSS/Resume.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/techstyle.css">
 </head>
 
 <body>
-  <nav class="navbar">
-    <div>
-      <a href="#summary">Summary</a>
-      <a href="#education">Education</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#personalProject">Personal Projects</a>
-      <a href="#techCard">Technical Skills</a>
-      <a href="#achievement">Achievements</a>
-    </div>
-  </nav>
+    <!-- Animated Background Canvas -->
+    <canvas id="background-canvas"></canvas>
 
-  <header class="profilePic">
-    <section class="profile">
-      <div class="profile-text">
-        <h1></span>Sanchit Dilip Shigvan</h1>
-        <p class="heading2">
-          I am Java Backend Developer Specialized in technology stack like Java, RestAPI, Spring, Spring Boot,
-          Hibernate, Oracle 19C with 5+ years experience.
-        </p>
-        <div class="buttons">
-          <a href="#summary" class="btn">Explore My Portfolio →</a>
-          <a href="#contact" class="btn secondary">Contact Me →</a>
-          <div> <a href="/Resource/SanchitShigvanResume.pdf" download class="btn2 icon-btn" title="Download Resume">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                <polyline points="7 10 12 15 17 10"></polyline>
-                <line x1="12" y1="15" x2="12" y2="3"></line>
-              </svg>
-            </a></div>
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">Portfolio</div>
+            <div class="nav-menu">
+                <a href="#hero" class="nav-link active" data-section="hero">Home</a>
+                <a href="#about" class="nav-link" data-section="about">About</a>
+                <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+                <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+                <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+                <a href="Resource/SanchitShigvanResume.pdf" class="nav-link" title="Download Resume" download style="display: flex; align-items: center; gap: 4px;">
+                    <i class="fas fa-download"></i>
+                    <span style="font-size: 0.95em;">Download</span>
+                </a>
+                <a href="https://1drv.ms/b/c/a56c47b5bce78594/ETGmtzTkq3hDvM1agqQw3soBIY5fYbiL0KfaQNLKMpDuvA?e=mS03P4" class="nav-link" title="View Resume Online" target="_blank" style="display: flex; align-items: center; gap: 4px;">
+                    <i class="fas fa-eye"></i>
+                    <span style="font-size: 0.95em;">View</span>
+                </a>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-      </div>
-      <div class="profile-image">
-        <img src="/Resource/Sanchit2.jpg" alt="Profile Image">
-      </div>
-    </section>
-  </header>
+        <div class="scroll-progress"></div>
+    </nav>
 
-  <main>
-    <div class="cards">
-      <section id="summary">
-        <div class="card">
-          <h2 class="heading2">📋 Summary</h2>
-          <ul>
-            <li>Seasoned Java Backend Developer with nearly 5 years of experience at Tata Consultancy Services (TCS) in
-              the BFSI domain, leading backend initiatives for a major US bank.</li>
-            <li> Currently working at Clover Infotech Private Limited as a Technical Lead for the client AU Small
-              Finance Bank.</li>
-            <li>Demonstrated expertise in building and enhancing enterprise-grade applications using Java, Spring Boot,
-              RESTful and SOAP services, Spring Batch, and Hibernate.</li>
-            <li>Proven ability to contribute across multiple application teams in parallel, delivering scalable and
-              reliable solutions.</li>
-            <li>Skilled in leading teams and driving end-to-end project delivery in high-velocity Agile environments.
-            </li>
-          </ul>
-      </section>
-    </div>
-
-
-    <section id="education">
-      <div class="card">
-
-        <h2 class="heading2">🎓 Education</h2>
-        <hr>
-        <h2 class="edu">Secondary School Certificate (Year : 2013-2014)</h2>
-        <p class="details"><span class="boldword">Board:</span> Maharashtra State Board of Secondary & Higher Secondary
-          Education, Pune</p>
-        <hr>
-        <h2 class="edu">Higher Secondary Certificate (Year : 2015-2016)</h2>
-        <p class="details"><span class="boldword">Board:</span> Maharashtra State Board of Secondary & Higher Secondary
-          Education, Pune</p>
-        <hr>
-        <h2 class="edu">Bachelor Of Computer Science (Year : 2016-2019)</h2>
-        <p class="details"><span class="boldword">Board:</span> University Of Mumbai</p>
-    </section>
-
-
-    <section id="experience">
-      <div style="margin-top: 30px;" class="card1">
-        <h2 class="exp">💼 Experience</h2>
-        <hr>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
         <div class="container">
-          <ul class="timeline">
-            <li>
-              <img class="img" src="/Resource/tcslogo.jpeg" alt="">
-              <h3 style="color: white;">26 August, 2019 - 10 June, 2024</h3>
-              <h4>Tata Consultancy Services Limited (TCS)</h4>
-              <p><span class="boldword">Designation :</span> Systems Engineer</p>
-              <p><span class="boldword">Role :</span> TCS FS Core Banking Product Implementations</p>
-            </li>
-            <li>
-              <img class="img" src="/Resource/cloverinfotech.png" alt="">
-              <h3 style="color: white;">14 January, 2025 - Present</h3>
-              <h4>Clover Infotech Private Limited</h4>
-              <p><span class="boldword">Designation :</span> Senior Software Engineer</p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects">
-      <div class="card">
-        <h2>📓 Projects</h2>
-        <div class="cards">
-          <div class="card">
-            <h3 class="companyheading">Tata Consultancy Services Limited (08/2019-06/2024)</h3>
-            <h3 class="clientheading">Client : Zions Bancorporation</h3>
-
-            <hr>
-            <h4 class="projectheading">TCS BaNCS SOAP/REST APIs(Team Member)</h4>
-            <p class="content1"><span class="highlight">Responsibilities :</span> Involved in sprint planning, Assigning
-              tasks, training/grooming freshers.</p>
-            <ul>
-              <li class="content1">Created and deployed 40+ REST APIs and 20+ Spring Boot APIs to integrate TCS BaNCS
-                Core Banking System (CBS) with client-facing applications, adhering to normal and IFX messaging
-                standards, significantly improving real-time data exchange and operational efficiency.</li>
-              <li class="content1">Designed and implemented SOAP web services using internal automation tools; tested
-                services with SoapUI and documented them using OpenAPI Specifications (Swagger).</li>
-              <li class="content1">Deployed and tested web services on JBoss and Tomcat application servers, ensuring
-                high availability and optimal performance across environments.</li>
-              <li class="content1">Followed CI/CD best practices to automate the build, testing, and deployment
-                processes, improving delivery speed and reducing integration issues.</li>
-              <li class="content1">Acted as a mentor by training newly onboarded developers, enhancing team productivity
-                and enabling them to handle independent development tasks.</li>
-              <li class="content1">Resolved critical production issues swiftly, minimizing downtime and protecting the
-                client from potential revenue loss.</li>
-            </ul>
-            <p class="highlight"><span class="highlight">Technology Stack- </span> Core Java, JAVA8, Exception Handling,
-              REST APIs, JSON, XML, SOAP, Spring Boot, JAXRS, JBoss-EAP 7.3</p>
-            <hr>
-            <h4 class="projectheading">TCS BaNCS Service Integrator(SPOC)</h4>
-            <p class="content1"><span class="highlight">Responsibilities :</span> Leading the team, Involved in sprint
-              planning, Assigning tasks, training/grooming freshers, Providing guidance.</p>
-            <ul>
-              <li class="content1">Configured and implemented TCS Service Integrator application independently for
-                multiple clients, tailoring setups based on unique business requirements and compliance needs.</li>
-              <li class="content1">Engineered business logic to process and validate bulk input files (XLS, CSV, TXT),
-                tracking the processing status of individual records for audit and reporting purposes.</li>
-              <li class="content1">Designed and developed an end-to-end IBM MQ-based interface enabling asynchronous
-                message communication between third-party systems and internal applications, improving integration
-                reliability and data exchange speed.</li>
-              <li class="content1">Followed CI/CD principles to develop and deploy robust web applications, ensuring
-                rapid delivery and high-quality code in line with DevOps standards.</li>
-            </ul>
-            <p class="highlight"><span class="highlight">Technology Stack- </span>Core Java, IBM-MQ, Spring, Spring
-              Batch, XML, Oracle 19c, GIT, TortoiseGit</p>
-            <hr>
-            <h4 class="projectheading">TCS BaNCS Individual Reporting System[BIRS](Team Member)</h4>
-            <ul>
-              <li class="content1">Developed a report generation module using Spring Batch and Hibernate, exporting data
-                in text format based on complex conditional logic from both relational databases and structured input
-                files.</li>
-              <li class="content1">Conducted in-depth research and optimization on Oracle databases, crafting efficient
-                SQL and HQL queries to reduce data retrieval time and improve overall application performance.</li>
-              <li class="content1">Collaborated with Quality Assurance (QA) teams to identify potential defects early in
-                the development lifecycle, ensuring high product quality and timely releases.</li>
-              <li class="content1">Followed CI/CD best practices for continuous development, testing, and deployment,
-                enabling faster delivery cycles and fewer integration issues.</li>
-              <li class="content1">Conducted research on Oracle database to optimize data fetching time through
-                effective SQL and HQL queries development.</li>
-            </ul>
-            <p class="highlight"><span class="highlight">Technology Stack- </span>Core Java, Java8, Struts, Spring
-              Batch, Hibernate, Javascript, Oracle 19c, XML, HTML, CSS, Jenkins, JBoss EAP-7.3, GIT, TortoiseGit.</p>
-
-            <hr>
-            <h4 class="projectheading"> TCS BaNCS USPS (United States Postal Service) Standalone JAR</h4>
-            <ul>
-              <li class="content1">Designed and developed a standalone Java JAR utility to automate address formatting
-                workflows, eliminating the need for
-                duplicate code across applications.</li>
-              <li class="content1"> Implemented business-specific rules for US address standardization (line length
-                limit of 40 characters, max 8 words per line,
-                configurable number of lines 3–8).</li>
-              <li class="content1">Supported parameters such as Account Title, Customer/Business Name, Street Address,
-                Address Supplement, Account
-                Description, City + State/Province + Pincode, and Country (if outside US).</li>
-              <li class="content1"> Developed a rule-based formatting code inside the JAR, ensuring consistent and
-                compliant address structures for consumption
-                by core banking systems. Integrated with the core banking system to process user inputs and generate
-                formatted responses as
-                per defined conditions.</li>
-              <li class="content1"> Enabled easy integration with Java applications via classpath reference, with
-                externalized configuration for flexibility.</li>
-              <li class="content1"> Built custom startup scripts and logging mechanism to simplify deployment and
-                troubleshooting across multiple environments.</li>
-            </ul>
-            <p class="highlight"><span class="highlight">Technology Stack- </span>Core Java, Java8, Collection Framwork,
-              Git, Tortoise Git</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3 class="companyheading">Clover Infotech Private Limited (01/2025-Present)</h3>
-          <h3 class="clientheading">Client : AU Small Finance Bank</h3>
-          <hr>
-          <h4 class="projectheading">AU Small Finance Bank (Technical Lead)</h4>
-          <p class="content1"><span class="highlight">Responsibilities : </span>
-          <ul>
-
-            <li class="content1">Leading the team of 4 team members. Involved in assigning tasks as well as tracking
-              progress and manage timelines. </li>
-            <li class="content1">Ensuring code quality through code reviews and helping team members grow technically
-              and professionally. </li>
-            <li class="content1">Developed new REST APIs using Spring Boot to extend backend functionality, adhering
-              to best practices in API design, security, and error handling. Consuming REST APIs created by the API
-              team.</li>
-            <li class="content1">Designed and implemented frontend UI components using HTML, CSS, and JavaScript
-              within the Oracle Web Content Management system.</li>
-            <li class="content1">Integrated REST APIs with frontend using AJAX calls to enable dynamic data retrieval
-              and seamless user experience.</li>
-            <li class="content1">Automated database-related tasks to reduce manual work to improve productivity in the
-              system. .</li>
-
-          </ul>
-          </p>
-          <p class="highlight"><span class="highlight">Technology Stack- </span> Core Java, Java8, Exception Handling,
-            REST APIs, JSON, SOAP, Spring Boot, Weblogic, Git, GitLab, HTML, CSS, Javascript, JWT, Jira, SHA-256
-            Cryptographic Algorithm</p>
-          <hr>
-          <h3 class="projectheading">Technical Interview Panel</h3>
-          <p class="clientheading">Clients : HDFC express, ICICI Lombard, AU Small Finance Bank, BAGIC</p>
-          <ul>
-            <li class="content1">Participated as a member of the technical interview panel for Java developer roles.
-            </li>
-            <li class="content1">Conducted 100+ technical interviews over 2-3 months and evaluated candidates
-              technical proficiency in Java, Spring Boot, Hibernate, REST APIs, Database and design patterns.</li>
-            <li class="content1">Assessed candidates understanding of object-oriented programming (OOP),
-              multithreading, exception handling, and data structures & algorithms.</li>
-            <li class="content1">Provided objective feedback and contributed to hiring decisions in collaboration with
-              HR and team leads.</li>
-          </ul>
-
-        </div>
-      </div>
-      </div>
-    </section>
-
-    <section id="personalProject">
-      <div class="card">
-        <h2>📓 Personal Projects</h2>
-        <hr>
-        <h2 class="edu"> ★ Weather App</h2>
-        <p class="content1"><span style="color: #2c9969;" class="boldword">Overview : </span> Developed WeatherApp to
-          check weather conditions, temperature, humidity, wind speed, and other relevant weather data for any specified
-          location.</p>
-        <p class="content1"><span style="color: #2c9969;" class="boldword">Technology Stack : </span>Core Java, Java8,
-          REST API, Spring Boot (Thymeleaf), HTML, CSS, JavaScript, OpenWeather API.</p>
-        <p class="boldword" style="color: #2c9969; text-align: center;">Snapshots</p>
-        <div class="slideshow-container" style="text-align: center;">
-          <div class="mySlides fade">
-            <img src="Resource/Home.jpg" style="width:60%">
-          </div>
-          <div class="mySlides fade">
-            <img src="Resource/SearchWeatherforCity.jpg" style="width:60%">
-          </div>
-          <div class="mySlides fade">
-            <img src="Resource/WeatherPage.jpg" style="width:60%">
-          </div>
-          <div class="mySlides fade">
-            <img src="Resource/ExpandableCards.jpg" style="width:60%">
-          </div>
-        </div>
-        <hr>
-        <h2 class="edu">★ Portfolio</h2>
-        <p class="content1"><span style="color: #2c9969;" class="boldword">Overview : </span> A responsive and
-          user-friendly personal portfolio website designed to highlight my experience in IT industry as Java Backend
-          Developer. The site features my professional carrer's project as well as personal project with my industry
-          experience. Tried to create interactive portfolio using HTML, CSS and Javascript..</p>
-        <p class="content1"><span style="color: #2c9969;" class="boldword">Technology Stack : </span> HTML, CSS,
-          JavaScript.</p>
-        <p class="boldword" style="color: #2c9969; text-align: center;">Snapshots</p>
-        <div class="slideshow-container" style="text-align: center;">
-          <div class="mySlides fade">
-            <img src="Resource/HomePage.jpg" style="width:60%">
-          </div>
-          <div class="mySlides fade">
-            <img src="Resource/Experience.jpg" style="width:60%">
-          </div>
-          <div class="mySlides fade">
-            <img src="Resource/Skills.png" style="width:60%">
-          </div>
-        </div>
-        <hr>
-        <h2 class="edu">★ User Registration Module</h2>
-        <p class="content1"><span style="color: #2c9969;" class="boldword">Overview : </span> This application is a
-          secure User Registration and Login Module built using Spring Boot. It provides REST APIs for user management,
-          implements Spring Security with JWT based authentication, and includes email verification using Java Mail
-          Sender. The frontend is developed using Thymeleaf, HTML, and CSS, java-script rendered via Spring Boot MVC</p>
-        <p class="content1"><span style="color: #2c9969;" class="boldword">Technology Stack : </span> Core Java, Java8,
-          REST API, Spring Boot (Thymeleaf), HTML, CSS, JavaScript, MySQL, Spring Security, JWT Token.</p>
-        <p class="boldword" style="color: #2c9969; text-align: center;">Snapshots</p>
-        <div class="slideshow-container" style="text-align: center;">
-          <div class="mySlides fade">
-            <img src="Resource/AppXLogin.jpg" style="width:60%">
-          </div>
-          <div class="mySlides fade">
-            <img src="Resource/ResetPassword.jpg" style="width:60%">
-          </div>
-          <div class="mySlides fade">
-            <img src="Resource/logout.jpg" style="width:60%">
-          </div>
-        </div>
-        <hr>
-        <h2 class="edu">★ AppX (Generative AI)</h2>
-        <p class="content1"><span style="color: #2c9969;" class="boldword">Overview : </span> This project is a secure
-          and interactive Generative AI web application built using Java and Spring Boot, with a dynamic frontend
-          powered
-          by Thymeleaf, HTML, CSS, and JavaScript. It integrates Google Gemini API to provide AI-generated responses and
-          uses Spring Security with JWT for robust user authentication. MySQL serves as the persistent data store.</p>
-        <p class="content1"><span style="color: #2c9969;" class="boldword">Technology Stack : </span> Core Java, Java8,
-          REST API, Spring Boot (Thymeleaf), HTML, CSS, JavaScript, MySQL, Google Gemini, Spring Security, JWT Token.
-        </p>
-        <p class="boldword" style="color: #2c9969; text-align: center;">Snapshots</p>
-        <div class="slideshow-container" style="text-align: center;">
-          <div class="mySlides fade">
-            <img src="Resource/AppXLogin.jpg" style="width:60%">
-          </div>
-          <div class="mySlides fade">
-            <img src="Resource/ResetPassword.jpg" style="width:60%">
-          </div>
-          <div class="mySlides fade">
-            <img src="Resource/OTP.jpg" style="width:60%">
-          </div>
-          <div class="mySlides fade">
-            <img src="Resource/WorkingSnap.jpg" style="width:60%">
-          </div>
-          <div class="mySlides fade">
-            <img src="Resource/logout.jpg" style="width:60%">
-          </div>
+            <div class="hero-content scroll-animate" data-animation="fade">
+                <h1 class="hero-title">
+                    Hi, I'm <span class="text-primary">Sanchit Dilip Shigvan</span>
+                </h1>
+                <div class="hero-subtitle">
+                    <span id="typing-text" class="typing-text"></span>
+                    <span class="cursor">|</span>
+                </div>
+                <p class="hero-description">
+                    I am Java Backend Developer Specialized in technology stack like Java, RestAPI, Spring, Spring Boot,
+                    Hibernate, Oracle 19C with 5.5+ years experience.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('projects')">View My Work</button>
+                    <button class="btn btn-outline" onclick="scrollToSection('contact')">Get In Touch</button>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="techCard">
-      <div class="card">
-        <h2 style="color: white;" class="exp">Technical Skills</h2>
-        <hr>
-        <p></p>
-        <div class="dock" style="background-color:#734F96;">
-          <div class="tech-item">
-            <img src="Resource/js.png" alt="JavaScript">
-            <div class="tech-name">JavaScript</div>
-          </div>
-          <div class="tech-item">
-            <img src="Resource/html.png" alt="HTML">
-            <div class="tech-name">HTML5</div>
-          </div>
-          <div class="tech-item">
-            <img src="Resource/css.png" alt="CSS">
-            <div class="tech-name">CSS3</div>
-          </div>
-          <div class="tech-item">
-            <img src="Resource/java.png" alt="Java">
-            <div class="tech-name">Java</div>
-          </div>
-          <div class="tech-item">
-            <img src="Resource/json.png" alt="JSON">
-            <div class="tech-name">JSON</div>
-          </div>
-          <div class="tech-item">
-            <img src="Resource/spring.png" alt="Spring">
-            <div class="tech-name">Spring Framework</div>
-          </div>
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header scroll-animate" data-animation="slideUp">
+                <h2 class="section-title">Summary</h2>
+                <p class="section-description">Experienced IT professional with 5.5+ years of expertise, currently
+                    working as a Technical Lead at Clover Infotech Pvt. Ltd. for AU Small Finance Bank.</p>
+                <p class="section-description">Seasoned Java Backend Developer with nearly 5 years of experience at Tata
+                    Consultancy Services (TCS) in the BFSI domain leading backend initiatives for a major US bank.</p>
+                <p class="section-description">Demonstrated expertise in building and enhancing enterprise-grade
+                    applications using Java, SpringBoot, RESTful and SOAP services, Spring Batch, and Hibernate.</p>
+                <p class="section-description">Proven ability to contribute across multiple application teams in
+                    parallel, delivering scalable and reliable solutions</p>
+                <p class="section-description">Skilled in leading teams and driving end-to-end project delivery in
+                    high-velocity Agile environments.</p>
+            </div>
+
+                <!-- Skills Card -->
+                <div class="card scroll-animate" data-animation="slideRight">
+                    <div class="card-header">
+                        <h3 class="card-title">Technical Skills</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="skills-container">
+                            <div id="skills-grid" class="skills-grid">
+                            <!-- Skills will be dynamically inserted here -->
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="dock" style="background-color:#734F96;">
-          <div class="tech-item">
-            <img src="Resource/hibernate.png" alt="Hibernate">
-            <div class="tech-name">Hibernate ORM</div>
-          </div>
-          <div class="tech-item">
-            <img src="Resource/git.png" alt="Git">
-            <div class="tech-name">Git</div>
-          </div>
-          <div class="tech-item">
-            <img src="Resource/github.png" alt="GitHub">
-            <div class="tech-name">GitHub</div>
-          </div>
-          <div class="tech-item">
-            <img src="Resource/gitlab.png" alt="GitLab">
-            <div class="tech-name">GitLab</div>
-          </div>
-          <div class="tech-item">
-            <img src="Resource/intellijidea.png" alt="IntelliJ IDEA">
-            <div class="tech-name">IntelliJ IDEA</div>
-          </div>
-          <div class="tech-item">
-            <img src="Resource/jenkins.png" alt="Jenkins">
-            <div class="tech-name">Jenkins CI/CD</div>
-          </div>
-        </div>
-        <div class="dock1" style="background-color:#734F96;">
-          <div class="tech-item">
-            <img src="Resource/xml.png" alt="XML">
-            <div class="tech-name">XML</div>
-          </div>
-          <div class="tech-item">
-            <img src="Resource/postman.png" alt="Postman">
-            <div class="tech-name">Postman</div>
-          </div>
-          <div class="tech-item">
-            <img src="Resource/redhat.png" alt="Red Hat">
-            <div class="tech-name">Red Hat Linux</div>
-          </div>
-          <div class="tech-item">
-            <img src="Resource/swagger.png" alt="Swagger">
-            <div class="tech-name">Swagger</div>
-          </div>
-          <div class="tech-item">
-            <img src="Resource/eclipse.png" alt="Eclipse">
-            <div class="tech-name">Eclipse IDE</div>
-          </div>
-          <div class="tech-item">
-            <img src="Resource/jboss.png" alt="JBoss">
-            <div class="tech-name">JBoss</div>
-          </div>
-        </div>
-        <div class="dock1" style="background-color:#734F96;">
-          <div class="tech-item">
-            <img src="Resource/docker.png" alt="Docker">
-            <div class="tech-name">Docker</div>
-          </div>
-          <div class="tech-item">
-            <img src="Resource/maven.png" alt="Maven">
-            <div class="tech-name">Apache Maven</div>
-          </div>
-          <div class="tech-item">
-            <img src="Resource/mysql.png" alt="MySQL">
-            <div class="tech-name">MySQL</div>
-          </div>
-          <div class="tech-item">
-            <img src="Resource/oracle.png" alt="Oracle">
-            <div class="tech-name">Oracle Database</div>
-          </div>
-          <div class="tech-item">
-            <img src="Resource/tomcat.png" alt="Tomcat">
-            <div class="tech-name">Apache Tomcat</div>
-          </div>
-          <div class="tech-item">
-            <img src="Resource/springsecurity.png" alt="Spring Security">
-            <div class="tech-name">Spring Security</div>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <section id="achievement">
-      <div class="card">
-        <div class="container12">
-          <h2>🎯 Achievements</h2>
-          <hr>
-          <h3 class="projectheading">🥇 On The Spot (2022)</h3>
-          <p class="highlight">Appreciated for contribution toward project.</p>
 
-          <h3 style="margin-top: 20px;" class="projectheading">📜 Appreciation Certificate (2021)</h3>
-          <p class="highlight">I got appreciation note from client side(Zions Bancs) for my contribution and team
-            spirit toward web service team.</p>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section">
+        <div class="container">
+            <div class="section-header scroll-animate" data-animation="slideUp">
+                <h2 class="section-title">Professional Experience</h2>
+                <p class="section-description">
+                    My professional journey in backend development, working with various technologies and contributing to projects across different industries.
+                </p>
+            </div>
+
+            <div class="experience-timeline">
+                <div class="timeline-item active">
+                    <div class="timeline-marker active"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2025 - Present</div>
+                        <h4>Clover Infotech Private Limited</h4>
+                        <h4>Technical Lead at AU Small Finance Bank</h4>
+                        <ul>
+                            <li><b>Responsibilities : </b>Leading the team of 4 team members. Involved in assigning tasks as
+                                well as tracking progress and manage timelines.</li>
+                            <li>Ensuring code quality through code reviews and helping team members grow technically and
+                                professionally.</li>
+                            <li>Developed new REST APIs using Spring Boot to extend backend functionality, adhering to
+                                best practices in API design, security, and error handling. Consuming REST APIs created
+                                by the API team.</li>
+                            <li>Designed and implemented frontend UI components using HTML, CSS, and JavaScript within
+                                the Oracle Web Content Management system.</li>
+                            <li>Integrated REST APIs with frontend using AJAX calls to enable dynamic data retrieval and
+                                seamless user experience.</li>
+                            <li>Automated database-related tasks to reduce manual work to improve productivity in the
+                                system.</li>
+                            <li><b>Technology Stack- Core Java, Java8, Exception Handling, REST APIs, JSON, SOAP, Spring
+                                Boot, Weblogic, Git, GitLab, HTML, CSS, Javascript, JWT, Jira, SHA-256 Cryptographic
+                                Algorithm</b></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h4>Technical Interview Panel at Clover Infotech Private Limited</h4>
+                                <ul>
+                                    <li><b>Clients : HDFC express, ICICI Lombard, AU Small Finance Bank, BAGIC</b></li>
+                                    <li>Participated as a member of the technical interview panel for Java developer
+                                        roles.</li>
+                                    <li>Conducted 100+ technical interviews over 2-3 months and evaluated candidates
+                                        technical proficiency in Java, Spring Boot, Hibernate, REST APIs, Database and
+                                        design patterns.</li>
+                                    <li>Assessed candidates understanding of object-oriented programming (OOP),
+                                        multithreading, exception handling, and data structures & algorithms.</li>
+                                    <li>Provided objective feedback and contributed to hiring decisions in collaboration
+                                        with HR and team leads.</li>
+                                </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2019 - 2024</div>
+                        <h4>Tata Consultancy Services Limited (TCS)</h4>
+                        <h4>Client : Zions Bancorporation</h4>
+                        <h4>1. TCS BaNCS SOAP/REST APIs(Team Member)</h4>
+                        <ul>
+                            <li><b>Responsibilities :</b> Involved in sprint planning, Assigning tasks, training/grooming
+                                freshers.</li>
+                            <li>Created and deployed 40+ REST APIs and 20+ Spring Boot APIs to integrate TCS BaNCS Core
+                                Banking System (CBS) with client-facing applications, adhering to normal and IFX
+                                messaging standards, significantly improving real-time data exchange and operational
+                                efficiency.</li>
+                            <li>Designed and implemented SOAP web services using internal automation tools; tested
+                                services with SoapUI and documented them using OpenAPI Specifications (Swagger).</li>
+                            <li>Deployed and tested web services on JBoss and Tomcat application servers, ensuring high
+                                availability and optimal performance across environments.</li>
+                            <li>Followed CI/CD best practices to automate the build, testing, and deployment processes,
+                                improving delivery speed and reducing integration issues.</li>
+                            <li>Acted as a mentor by training newly onboarded developers, enhancing team productivity
+                                and enabling them to handle independent development tasks.</li>
+                            <li>Resolved critical production issues swiftly, minimizing downtime and protecting the
+                                client from potential revenue loss.</li>
+                            <li><b>Technology Stack- Core Java, JAVA8, Exception Handling, REST APIs, JSON, XML, SOAP,
+                                Spring Boot, JAXRS, JBoss-EAP 7.3</b></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h4>2. TCS BaNCS Service Integrator(SPOC)</h4>
+                        <ul>
+                            <li><b>Responsibilities :</b> Leading the team, Involved in sprint planning, Assigning tasks,
+                                training/grooming freshers, Providing guidance.</li>
+                            <li>Configured and implemented TCS Service Integrator application independently for multiple
+                                clients, tailoring setups based on unique business requirements and compliance needs.
+                            </li>
+                            <li>Engineered business logic to process and validate bulk input files (XLS, CSV, TXT),
+                                tracking the processing status of individual records for audit and reporting purposes.
+                            </li>
+                            <li>Designed and developed an end-to-end IBM MQ-based interface enabling asynchronous
+                                message communication between third-party systems and internal applications, improving
+                                integration reliability and data exchange speed.</li>
+                            <li>Followed CI/CD principles to develop and deploy robust web applications, ensuring rapid
+                                delivery and high-quality code in line with DevOps standards.</li>
+                            <li><b>Technology Stack- Core Java, IBM-MQ, Spring, Spring Batch, XML, Oracle 19c, GIT,
+                                TortoiseGit</b></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h4>3. TCS BaNCS Individual Reporting System[BIRS](Team Member)</h4>
+                        <ul>
+                            <li>Developed a report generation module using Spring Batch and Hibernate, exporting data in
+                                text format based on complex conditional logic from both relational databases and
+                                structured input files.</li>
+                            <li>Conducted in-depth research and optimization on Oracle databases, crafting efficient SQL
+                                and HQL queries to reduce data retrieval time and improve overall application
+                                performance.</li>
+                            <li>Collaborated with Quality Assurance (QA) teams to identify potential defects early in
+                                the development lifecycle, ensuring high product quality and timely releases.</li>
+                            <li>Followed CI/CD best practices for continuous development, testing, and deployment,
+                                enabling faster delivery cycles and fewer integration issues.</li>
+                            <li>Conducted research on Oracle database to optimize data fetching time through effective
+                                SQL and HQL queries development.</li>
+                            <li><b>Technology Stack- Core Java, Java8, Struts, Spring Batch, Hibernate, Javascript, Oracle
+                                19c, XML, HTML, CSS, Jenkins, JBoss EAP-7.3, GIT, TortoiseGit.</b></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h4>4. TCS BaNCS USPS (United States Postal Service) Standalone JAR</h4>
+                        <ul>
+                            <li>Designed and developed a standalone Java JAR utility to automate address formatting
+                                workflows, eliminating the need for duplicate code across applications.</li>
+                            <li>Implemented business-specific rules for US address standardization (line length limit of
+                                40 characters, max 8 words per line, configurable number of lines 3–8).Supported
+                                parameters such as Account Title, Customer/Business Name, Street Address, Address
+                                Supplement, Account Description, City + State/Province + Pincode, and Country (if
+                                outside US).</li>
+                            <li>Developed a rule-based formatting code inside the JAR, ensuring consistent and compliant
+                                address structures for consumption by core banking systems. Integrated with the core
+                                banking system to process user inputs and generate formatted responses as per defined
+                                conditions.</li>
+                            <li>Enabled easy integration with Java applications via classpath reference, with
+                                externalized configuration for flexibility.</li>
+                            <li>Built custom startup scripts and logging mechanism to simplify deployment and
+                                troubleshooting across multiple environments.</li>
+                            <li><b>Technology Stack- Core Java, Java8, Collection Framwork, Git, Tortoise Git</b></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
         </div>
-      </div>
     </section>
 
-    <section id="contact">
-      <div class="icon-container">
-        <h2 style="text-align: center;">Contact Me</h2>
-        <a style="margin-left: 30px;" href="mailto:sanchitshigvanofficial@gmail.com" target="_blank" title="Email"><i
-            class="fas fa-envelope fa-2x"></i></a>
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header scroll-animate" data-animation="slideUp">
+                <h2 class="section-title">Personal Projects</h2>
+                <p class="section-description">
+                    Here are some of my recent backend projects showcasing my expertise in Java, Spring Boot,
+                    and scalable system architecture.
+                </p>
+            </div>
+
+            <div class="projects-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Weather App</h3>
+                    </div>
+                    <div class="card-content">
+                        <p><b>Overview: </b>Developed WeatherApp to check weather conditions, temperature, humidity, wind
+                            speed, and other relevant weather data for any specified location.</p>
+                        <p><b>Technology Stack: Core Java, Java8, REST API, Spring Boot (Thymeleaf), HTML, CSS,
+                            JavaScript, OpenWeather API.</b></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">User Registration Module</h3>
+                    </div>
+                    <div class="card-content">
+                        <p><b>Overview : </b>This application is a secure User Registration and Login Module built using Spring
+                            Boot. It provides REST APIs for user management, implements Spring Security with JWT based
+                            authentication, and includes email verification using Java Mail Sender. The frontend is
+                            developed using Thymeleaf, HTML, and CSS, java-script rendered via Spring Boot MVC.</p>
+                        <p><b>Technology Stack :Core Java, Java8, REST API, Spring Boot (Thymeleaf), HTML, CSS,
+                            JavaScript, MySQL, Spring Security, JWT Token.</b></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">AppX (Generative AI)</h3>
+                    </div>
+                    <div class="card-content">
+                        <p><b>Overview: </b>This project is a secure and interactive Generative AI web application built using Java and
+                            Spring Boot, with a dynamic frontend powered by Thymeleaf, HTML, CSS, and JavaScript. It
+                            integrates Google Gemini API to provide AI-generated responses and uses Spring Security with
+                            JWT for robust user authentication. MySQL serves as the persistent data store.</p>
+                        <p><b>Technology Stack : Core Java, Java8, REST API, Spring Boot (Thymeleaf), HTML, CSS,
+                            JavaScript, MySQL, Google Gemini, Spring Security, JWT Token.</b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header scroll-animate" data-animation="slideUp">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-description">
+                    I'm always interested in discussing new opportunities, challenging projects, or simply connecting with fellow developers. Let's talk!
+                </p>
+            </div>
+
+            <div class="contact-grid">
+
+        <a style="margin-left: 50px;" href="mailto:sanchitshigvanofficial@gmail.com" target="_blank" title="Email"><i
+            class="fas fa-envelope fa-3x"></i></a>
         <a href="https://instagram.com/_sanchit5_" target="_blank" title="Instagram"><i
-            class="fab fa-instagram fa-2x"></i></a>
-        <a href="https://github.com/sanchits5" target="_blank" title="GitHub"><i class="fab fa-github fa-2x"></i></a>
+            class="fab fa-instagram fa-3x"></i></a>
+        <a href="https://github.com/sanchits5" target="_blank" title="GitHub"><i class="fab fa-github fa-3x"></i></a>
         <a href="https://www.linkedin.com/in/sanchit-shigvan-dev" target="_blank" title="LinkedIn"><i
-            class="fab fa-linkedin fa-2x"></i></a>
-        <a href="tel:+91-9029511820" title="Call"><i class="fas fa-phone fa-2x"></i></a>
-      </div>
+            class="fab fa-linkedin fa-3x"></i></a>
+        <a href="tel:+91-9029511820" title="Call"><i class="fas fa-phone fa-3x"></i></a>
+      
+                </div>
+            </div>
+        </div>
     </section>
-  </main>
 
-  <footer>
-    <p>&copy; 2025 Sanchit Dilip Shigvan. All rights reserved.</p>
-  </footer>
-  </div>
-  <script src="/JavaScript/Resume.js"></script>
-
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Sanchit Dilip Shigvan.  All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="JavaScript/script.js"></script>
+    <script src="JavaScript/techscript.js"></script>
 </body>
 
 </html>
