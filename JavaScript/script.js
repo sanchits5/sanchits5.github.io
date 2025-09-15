@@ -42,7 +42,7 @@ function initializeAnimatedBackground() {
 
     // Particle system
     const particles = [];
-    const particleCount = 50;
+    const particleCount = 200;
 
     // Create particles
     for (let i = 0; i < particleCount; i++) {
