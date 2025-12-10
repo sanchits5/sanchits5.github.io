@@ -6,19 +6,9 @@ const javaSkills = [
         note: 'OOP concepts, multithreading & memory management'
     },
     {
-        name: 'Java 8',
+        name: 'Java 8/11/17/21/25',
         logoPath: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg',
         note: 'Streams, lambda expressions & functional programming'
-    },
-    {
-        name: 'Java Collections',
-        logoPath: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg',
-        note: 'Efficient data structures & algorithmic operations'
-    },
-    {
-        name: 'Exception Handling',
-        logoPath: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg',
-        note: 'Robust error handling & custom exceptions'
     },
     {
         name: 'REST APIs',
@@ -74,6 +64,11 @@ const javaSkills = [
         name: 'Spring Batch',
         logoPath: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg',
         note: 'Batch processing & job scheduling for large datasets'
+    },
+     {
+        name: 'IBM-MQ',
+        logoPath: '/resource/IBM-MQ.png',
+        note: 'Asynchronous messaging & integration middleware'
     },
     {
         name: 'Hibernate',
